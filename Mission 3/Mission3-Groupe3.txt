@@ -1,0 +1,97 @@
+CREATE TABLE CONNEXION
+(connex_id varchar(50),
+ connex_mdp varchar (20),
+ constraint PF_CONNEXION primary key (connex_id)
+);
+
+CREATE TABLE EMPLOYE
+(id_emp varchar(5) not null,
+ nom_emp varchar (25),
+ prenom_emp varchar (20),
+ date_nais_emp date,
+ tel_emp integer,
+ mail_emp varchar (50),
+ constraint PK_EMPLOYE primary key(id_emp),
+ constraint FK_EMPLOYE_CONNEXION foreign key (mail_emp) REFERENCES CONNEXION(connex_id)
+);
+
+CREATE TABLE FACTURE
+(type_fact varchar(5) not null,
+ libelle_fact varchar (20),
+ constraint PK_FACTURE primary key (type_fact)
+);
+
+CREATE TABLE JUSTIFICATIF
+(id_just varchar (5) not null,
+ id_emp varchar (5),
+ date_just date,
+ montant_init_just decimal (6,2),
+ montant_remb_just decimal(6,2),
+ type_fact varchar(5),
+ justif_inclus boolean,
+ constraint PK_JUSTIFICATIF primary key (id_just),
+ constraint FK_JUSTIFICATIF_EMPLOYE foreign key (id_emp) REFERENCES EMPLOYE(id_emp),
+ constraint FK_JUSTIFICATIF_FACTURE foreign key (type_fact) REFERENCES FACTURE(type_fact)
+);
+
+Insert into CONNEXION values ('L_F2356@@yahoo.fr','P46.RD23!');
+Insert into CONNEXION values ('Edouard_Gros@outlook.com','Ed23/oua/89d');
+Insert into CONNEXION values ('F.hector@gmail.com','Hector296/789');
+Innert into CONNEXION values ('Marie_Larry@hotmail.com','Larry/8965');
+Insert into CONNEXION values ('M_chaton@gmail.com','Marck/Chaton');
+
+Insert into CONNEXION values ('Dupondjean@gmail.com','Jean/Dupond');
+Insert into CONNEXION values ('a_lucas7082@icloud.fr','ZDDMW425O7');
+Insert into CONNEXION values ('owen.rush@icloud.fr','ROBSF362W3');
+Insert into CONNEXION values ('s.henry@outlook.fr','WRWQK686V5');
+Insert into CONNEXION values ('arsenio.ellison@gmail.fr','MUCSR362P4');
+Insert into CONNEXION values ('knox.nunez4081@outlook.com','KWDWX924J3');
+Insert into CONNEXION values ('harrington_damian4410@gmail.fr','IMTQT495X5');
+Insert into CONNEXION values ('anjolie.rodriquez3367@icloud.com','IDBYS843S6');
+Insert into CONNEXION values ('c_hillary@outlook.com','SGKWB431G5');
+Insert into CONNEXION values ('d_brewer@gmail.com','KNOKY872H7');
+Insert into CONNEXION values ('brett_mathis@gmail.fr','OXLRY436V1');
+Insert into CONNEXION values ('g.zenia7653@yahoo.com','ZJWMW257Y1');
+Insert into CONNEXION values ('h_brady@icloud.com','BHSNE836S6');
+Insert into CONNEXION values ('r_roanna2419@yahoo.fr','XFVGY432C1');
+Insert into CONNEXION values ('bond-lysandra6892@yahoo.com','QRQBJ632T3');
+Insert into CONNEXION values ('rutledge_lesley@yahoo.fr','ACQUT185H2');
+Insert into CONNEXION values ('grady.morse491@icloud.com','HPFTV922V4');
+Insert into CONNEXION values ('m-wade3568@gmail.fr','MVMEW642H7');
+Insert into CONNEXION values ('demetria.waller4513@outlook.com','KUWAY465H8');
+Insert into CONNEXION values ('c.byron@outlook.fr','EFJDT253V2');
+Insert into CONNEXION values ('giles.devin@outlook.com','QMCHH086M1');
+
+Insert into EMPLOYE values ('H236Q','FRAUNIE','Lucie','18/02/1976',0671295382','L_F2356@@yahoo.fr');
+Insert into EMPLOYE values ('Z238G','GROS','Edouard','03/01/1985',0786351529','Edouard_Gros@outlook.com');
+Insert into EMPLOYE values ('F756R','FROUD','Hector','07/09/1970',0656241595,'F.Hector@gmail.com');
+Insert into EMPLOYE values ('D129J','LARRY','Marie','16/12/1983',0756789542,'Marie_Larry@hotmail.com');
+Insert into EMPLOYE values ('B450C','CHATON','Marck','24/02/1980',0765891232,'M_Chaton@gmail.com');
+
+Insert into EMPLOYE values ('A401M','DUPOND','Jean','14/12/1982',0642643490,'Dupondjean@gmail.com');
+Insert into EMPLOYE values ('LC222','Lucas','Ariana','09/10/1987','0741125766','a_lucas7082@icloud.fr');
+Insert into EMPLOYE values ('TT203','Rush','Owen','26/09/1987','0720679860','owen.rush@icloud.fr');
+Insert into EMPLOYE values ('WL227','Henry','Selma','04/04/1971','0751562074','s.henry@outlook.fr');
+Insert into EMPLOYE values ('PB338','Ellison','Arsenio','11/02/1966','0778688728','arsenio.ellison@gmail.fr');
+Insert into EMPLOYE values ('FK415','Nunez','Knox','11/04/1971','0743348476','knox.nunez4081@outlook.com');
+Insert into EMPLOYE values ('UK081','Harrington','Damian','22/08/1965','0771365485','harrington_damian4410@gmail.fr');
+Insert into EMPLOYE values ('LL236','Rodriquez','Anjolie','03/06/1968','0655118667','anjolie.rodriquez3367@icloud.com');
+Insert into EMPLOYE values ('SB465','Chang','Hillary','15/09/1985','0742149672','c_hillary@outlook.com');
+Insert into EMPLOYE values ('LG741','Brewer','Dieter','16/09/1979','0737928527','d_brewer@gmail.com');
+Insert into EMPLOYE values ('RT843','Mathis','Brett','28/05/1973','0614383876','brett_mathis@gmail.fr');
+Insert into EMPLOYE values ('FD898','Garrett','Zenia','21/11/1993','0673356174','g.zenia7653@yahoo.com');
+Insert into EMPLOYE values ('JP588','Brady','Hamilton','14/08/1985','0663335212','h_brady@icloud.com');
+Insert into EMPLOYE values ('LT217','Reyes','Roanna','30/01/1968','0655117716','r_roanna2419@yahoo.fr');
+Insert into EMPLOYE values ('GJ276','Bond','Lysandra','20/10/1992','0634861797','bond-lysandra6892@yahoo.com');
+Insert into EMPLOYE values ('BO613','Rutledge','Lesley','03/07/1994','0796755470','rutledge_lesley@yahoo.fr');
+Insert into EMPLOYE values ('PK648','Morse','Grady','06/05/1975','0784277330','grady.morse491@icloud.com');
+Insert into EMPLOYE values ('XP788','Wade','Madeline','16/01/1982','0790227621','m-wade3568@gmail.fr');
+Insert into EMPLOYE values ('TA301','Waller','Demetria','12/06/1980','0760297952','demetria.waller4513@outlook.com');
+Insert into EMPLOYE values ('SY422','Curry','Byron','21/09/1976','0640414586','c.byron@outlook.fr');
+Insert into EMPLOYE values ('NY533','Giles','Devin','18/01/1968','0757518046','giles.devin@outlook.com');
+
+
+Insert into FACTURE values (1,'REPAS');
+Insert into FACTURE values (2,'NUIT HOTEL');
+Insert into FACTURE values (3,'CARBURANT');
+Insert into FACTURE values (4,'AUTOROUTE');

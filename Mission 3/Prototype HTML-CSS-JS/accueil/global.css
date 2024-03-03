@@ -1,0 +1,26 @@
+body {
+  margin: 0;
+  line-height: normal;
+}
+
+:root {
+  /* fonts */
+  --font-inria-sans: "Inria Sans";
+
+  /* font sizes */
+  --font-size-base: 16px;
+  --font-size-5xl: 24px;
+  --font-size-13xl: 32px;
+  --font-size-21xl: 40px;
+  --font-size-lgi-5: 19.5px;
+
+  /* Colors */
+  --color-gray-100: rgba(255, 255, 255, 0.12);
+  --color-white: #fff;
+  --color-deepskyblue-100: rgba(0, 183, 241, 0.2);
+  --color-deepskyblue-200: rgba(0, 183, 241, 0.12);
+
+  /* Border radiuses */
+  --br-xl: 20px;
+  --br-4xs: 9px;
+}

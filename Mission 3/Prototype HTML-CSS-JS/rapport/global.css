@@ -1,0 +1,22 @@
+body {
+  margin: 0;
+  line-height: normal;
+}
+
+:root {
+  /* fonts */
+  --font-inria-sans: "Inria Sans";
+
+  /* font sizes */
+  --font-size-lgi-5: 19.5px;
+  --font-size-xl: 20px;
+
+  /* Colors */
+  --color-white: #fff;
+  --color-deepskyblue-100: rgba(0, 183, 241, 0.5);
+  --color-gainsboro: rgba(217, 217, 217, 0.5);
+
+  /* Border radiuses */
+  --br-9xs: 4px;
+  --br-xl: 20px;
+}

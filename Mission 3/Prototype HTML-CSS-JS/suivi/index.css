@@ -1,0 +1,304 @@
+.desktop-1-child,
+.desktop-1-item {
+  position: absolute;
+  top: 782px;
+  left: 948px;
+  border-radius: 50%;
+  background-color: #237e9b;
+  filter: blur(300px);
+  width: 279px;
+  height: 549px;
+}
+.desktop-1-item {
+  top: 109px;
+  left: -330px;
+  background-color: #24a3cb;
+  width: 582px;
+  height: 295px;
+}
+.barre-de-menu {
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 16px;
+  background-color: rgba(255, 255, 255, 0.12);
+  width: 1176px;
+  height: 56px;
+}
+.accueil,
+.rapport,
+.saisie-des-justificatifs,
+.suivi-des-remboursements {
+  position: absolute;
+  top: 0;
+  left: 149px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 68px;
+  height: 56px;
+  mix-blend-mode: normal;
+  color: #ffffff;
+  text-decoration: none;
+
+}
+
+.accueil:hover,
+.rapport:hover,
+.saisie-des-justificatifs:hover,
+.suivi-des-remboursements:hover {
+  color: #ff0000; /* Couleur du texte au survol */
+  text-decoration: underline; /* Si vous voulez souligner au survol */
+}
+
+.rapport,
+.saisie-des-justificatifs,
+.suivi-des-remboursements {
+  left: 341px;
+  width: 205px;
+}
+.rapport,
+.suivi-des-remboursements {
+  left: 670px;
+  width: 252px;
+}
+.rapport {
+  left: 1047px;
+  width: 77px;
+}
+.navbar-child {
+  position: absolute;
+  top: 17.5px;
+  left: 119.5px;
+  border-right: 1px solid var(--color-gray-100);
+  box-sizing: border-box;
+  width: 1px;
+  height: 22px;
+}
+.logo-icon {
+  position: absolute;
+  top: 7px;
+  left: 41px;
+  border-radius: 316px;
+  width: 43px;
+  height: 42px;
+  object-fit: cover;
+}
+.bar-de-suivi-child,
+.navbar {
+  position: absolute;
+  width: 1176px;
+}
+.navbar {
+  top: 44px;
+  left: 132px;
+  height: 56px;
+  text-align: center;
+}
+.bar-de-suivi-child {
+  top: 0;
+  left: 0;
+  border-radius: var(--br-xl);
+  background-color: rgba(0, 183, 241, 0.1);
+  height: 67px;
+}
+.date,
+.montant,
+.nature,
+.statut {
+  position: absolute;
+  top: 16px;
+  left: 670px;
+  display: flex;
+  align-items: center;
+  width: 188px;
+  height: 32px;
+}
+.date,
+.montant,
+.statut {
+  left: 27px;
+  width: 229px;
+}
+.date,
+.statut {
+  left: 268px;
+  width: 188px;
+}
+.statut {
+  top: 17px;
+  left: 1050px;
+  text-align: center;
+  justify-content: center;
+  width: 72px;
+  height: 31px;
+}
+.bar-de-suivi {
+  position: absolute;
+  top: 189px;
+  left: 132px;
+  width: 1176px;
+  height: 67px;
+}
+.grand-rectangle,
+.rectangle-tab-icon {
+  position: absolute;
+  border-radius: var(--br-xl);
+}
+.grand-rectangle {
+  top: 282px;
+  left: 130px;
+  background-color: rgba(0, 183, 241, 0.12);
+  width: 1176px;
+  height: 530px;
+}
+.rectangle-tab-icon {
+  top: 307px;
+  left: 152px;
+  width: 1137px;
+  height: 478px;
+}
+.desktop-1-inner,
+.line-div,
+.line-icon {
+  position: absolute;
+  top: 682px;
+  left: 151px;
+  width: 1134.38px;
+  height: 3.12px;
+}
+.line-div,
+.line-icon {
+  top: 719.27px;
+}
+.line-div {
+  top: 758.05px;
+  left: 152.12px;
+  border-top: 3px solid var(--color-gray-100);
+  box-sizing: border-box;
+  width: 1137.38px;
+  height: 3px;
+}
+.ligne-tableau-icon {
+  position: absolute;
+  top: 347px;
+  left: 151px;
+  width: 1137px;
+  height: 300.77px;
+}
+.repas {
+  position: absolute;
+  left: 813px;
+  display: flex;
+  align-items: center;
+  width: 188px;
+}
+.b,
+.b1,
+.repas {
+  top: 318px;
+  height: 32px;
+}
+.b {
+  position: absolute;
+  left: 170px;
+  display: flex;
+  align-items: center;
+  width: 229px;
+}
+.b1 {
+  left: 411px;
+  width: 188px;
+}
+.b1,
+.htel,
+.valider {
+  position: absolute;
+  display: flex;
+  align-items: center;
+}
+.valider {
+  top: 319px;
+  left: 1193px;
+  text-align: center;
+  justify-content: center;
+  width: 72px;
+  height: 31px;
+}
+.htel {
+  left: 813px;
+  width: 188px;
+}
+.b2,
+.b3,
+.htel {
+  top: 355px;
+  height: 32px;
+}
+.b2 {
+  position: absolute;
+  left: 170px;
+  display: flex;
+  align-items: center;
+  width: 229px;
+}
+.b3 {
+  left: 411px;
+  width: 188px;
+}
+.b3,
+.b4,
+.b5,
+.en-cours,
+.page,
+.refuser {
+  position: absolute;
+  display: flex;
+  align-items: center;
+}
+.en-cours {
+  top: 355px;
+  left: 1191px;
+  text-align: center;
+  justify-content: center;
+  width: 86px;
+  height: 31px;
+}
+.b4,
+.b5,
+.page,
+.refuser {
+  top: 392px;
+  left: 813px;
+  width: 188px;
+  height: 32px;
+}
+.b4,
+.b5,
+.refuser {
+  left: 170px;
+  width: 229px;
+}
+.b5,
+.refuser {
+  left: 411px;
+  width: 188px;
+}
+.refuser {
+  left: 1196px;
+  text-align: center;
+  justify-content: center;
+  width: 72px;
+  height: 31px;
+}
+.desktop-1 {
+  position: relative;
+  background-color: #151c21;
+  width: 100%;
+  height: 837px;
+  overflow: hidden;
+  text-align: left;
+  font-size: var(--font-size-lgi-5);
+  color: var(--color-white);
+  font-family: var(--font-inria-sans);
+}

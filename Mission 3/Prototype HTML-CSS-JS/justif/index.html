@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="initial-scale=1, width=device-width" />
+    
+
+    <link rel="stylesheet" href="./global.css" />
+    <link rel="stylesheet" href="./index.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inria Sans:wght@700&display=swap"
+    />
+  </head>
+  <body>
+    <div class="desktop-1">
+      <div class="desktop-1-child"></div>
+      <div class="desktop-1-item"></div>
+      <div class="navbar">
+        <div class="barre-de-menu"></div>
+        <a class="accueil" href="../accueil/index.html">Accueil</a>
+        <a class="saisie-des-justificatifs" href="../justif/index.html">Saisie des justificatifs</a>
+        <a class="suivi-des-remboursements" href="../suivi/index.html">Suivi des remboursements</a>
+        <a class="rapport" href="../rapport/index.html">Rapport</a>
+        <div class="navbar-child"></div>
+        <img class="logo-icon" alt="" src="../logo@2x.png" />
+      </div>
+      <div class="er-tableau-de-saisie">
+        <div class="er-tableau-de-saisie-child"></div>
+        <b class="date">Date</b>
+        <input type="date" id="date-input" class="date-input" name="date">
+        <b class="nature">Nature</b>
+        <select name="nature" id="nature-select" class="nature-select">
+          <option value="">--Sélectionner--</option>
+          <option value="carburant">Carburant</option>
+          <option value="peage">Péage</option>
+          <option value="nuit_hotel">Nuit d'hôtel</option>
+          <option value="repas">Repas</option>
+        </select>
+        <div class="er-tableau-de-saisie-item"></div>
+        <div class="er-tableau-de-saisie-inner"></div>
+        <img
+          class="logo-carburant-1-icon"
+          alt=""
+          src="./public/logo-carburant-1@2x.png"
+        />
+
+        <img
+          class="logo-hotel-1-icon"
+          alt=""
+          src="./public/logo-hotel-1@2x.png"
+        />
+
+        <img
+          class="logo-peage-1-icon"
+          alt=""
+          src="./public/logo-peage-1@2x.png"
+        />
+
+        <img
+          class="sans-titre-12-1"
+          alt=""
+          src="./public/sans-titre-12-1@2x.png"
+        />
+      </div>
+
+      <div id="tableau-hotel" class="tableau-hotel" style="display:none;">
+        <b class="montant-hotel">Montant</b>
+        <div class="montant-devise-wrapper-hotel">
+          <input type="text" id="montant-input-hotel" class="montant-input-hotel" name="montant">
+          <select name="devise" id="devise-select-hotel" class="devise-select-hotel">
+            <option value="">--Sélectionner--</option>
+            <option value="eur">EUR(€)</option>
+            <option value="usd">USD ($)</option>
+            <option value="gbp">GBP (£)</option>
+            <option value="jpy">JPY (¥)</option>
+            <option value="chf">CHF (CHF)</option>
+            <option value="cad">CAD (C$)</option>
+          </select>
+        </div>
+        <input type="text" id="remarque-input-hotel" class="remarque-input-hotel" name="remarque">
+        <b class="remarque-hotel">Remarque</b>
+        <input type="text" id="lieu-input-hotel" class="lieu-input-hotel" name="lieu">
+        <b class="lieu-hotel">Lieu</b>
+        <input type="text" id="nombre-input-hotel" class="nombre-input-hotel" name="remarque">
+        <b class="nombre-hotel">Nombre</b>
+        <b class="pays-hotel">Pays</b>
+        <select name="pays" id="pays-input-hotel" class="pays-input-hotel">
+          <option value="">--Sélectionner--</option>
+          <option value="FR">FR - France</option>
+          <option value="DE">DE - Allemagne</option>
+          <option value="BE">BE - Belgique</option>
+          <option value="CH">CH - Suisse</option>
+          <option value="IT">IT - Italie</option>
+          <option value="ES">ES - Espagne</option>
+          <option value="GB">GB - Royaume-Uni</option>
+          <option value="US">US - États-Unis</option>
+          <option value="CA">CA - Canada</option>
+          <option value="CN">CN - Chine</option>
+          <option value="JP">JP - Japon</option>
+          <option value="RU">RU - Russie</option>
+        </select>
+        <b class="enregistrer-ajouter-hotel">Enregistrer et ajouter</b>
+        <b class="annuler-hotel">Annuler</b>
+        <b class="ajouter-justif-hotel">Ajouter un justificatif</b>
+      </div>
+
+      <div id="tableau-carburant" class="tableau-carburant" style="display: none;">
+        <b class="montant">Montant</b>
+        <div class="montant-devise-wrapper">
+          <input type="text" id="montant-input" class="montant-input" name="montant">
+          <select name="devise" id="devise-select" class="devise-select">
+            <option value="">--Sélectionner--</option>
+            <option value="eur">EUR(€)</option>
+            <option value="usd">USD ($)</option>
+            <option value="gbp">GBP (£)</option>
+            <option value="jpy">JPY (¥)</option>
+            <option value="chf">CHF (CHF)</option>
+            <option value="cad">CAD (C$)</option>
+          </select>
+        </div>
+        <input type="text" id="remarque-input" class="remarque-input" name="remarque">
+        <b class="remarque">Remarque</b>
+        <b class="vhicule">Véhicule</b>
+        <input type="text" id="vhicule-input" class="vhicule-input" name="vhicule">
+        <b class="pays">Pays</b>
+        <select name="pays" id="pays-input" class="pays-input">
+          <option value="">--Sélectionner--</option>
+          <option value="FR">FR - France</option>
+          <option value="DE">DE - Allemagne</option>
+          <option value="BE">BE - Belgique</option>
+          <option value="CH">CH - Suisse</option>
+          <option value="IT">IT - Italie</option>
+          <option value="ES">ES - Espagne</option>
+          <option value="GB">GB - Royaume-Uni</option>
+          <option value="US">US - États-Unis</option>
+          <option value="CA">CA - Canada</option>
+          <option value="CN">CN - Chine</option>
+          <option value="JP">JP - Japon</option>
+          <option value="RU">RU - Russie</option>
+        </select>
+        <b class="enregistrer-ajouter">Enregistrer et ajouter</b>
+        <b class="annuler">Annuler</b>
+        <b class="ajouter-justif-carb">Ajouter un justificatif</b>
+      </div>
+
+      <div id="tableau-repas" class="tableau-repas" style="display:none;">
+        <b class="montant-repas">Montant</b>
+        <div class="montant-devise-wrapper-repas">
+          <input type="text" id="montant-input-repas" class="montant-input-repas" name="montant">
+          <select name="devise" id="devise-select-repas" class="devise-select-repas">
+            <option value="">--Sélectionner--</option>
+            <option value="eur">EUR(€)</option>
+            <option value="usd">USD ($)</option>
+            <option value="gbp">GBP (£)</option>
+            <option value="jpy">JPY (¥)</option>
+            <option value="chf">CHF (CHF)</option>
+            <option value="cad">CAD (C$)</option>
+          </select>
+        </div>
+        <input type="text" id="remarque-input-repas" class="remarque-input-repas" name="remarque">
+        <b class="remarque-repas">Remarque</b>
+        <input type="text" id="lieu-input-repas" class="lieu-input-repas" name="lieu">
+        <b class="lieu-repas">Lieu</b>
+        <input type="text" id="TVA-montant-input-repas" class="TVA-montant-input-repas" name="TVA-montant">
+        <b class="TVA-repas">TVA</b>
+        <select name="TVA" id="TVA-input-repas" class="TVA-input-repas">
+          <option value="10">10%</option>
+          <option value="20">20%</option>
+          <option value="5.5">5.5%</option>
+        </select>
+        <b class="ajouter-TVA-repas">Ajouter TVA</b>
+        <b class="pays-repas">Pays</b>
+        <select name="pays" id="pays-input-repas" class="pays-input-repas">
+          <option value="">--Sélectionner--</option>
+          <option value="FR">FR - France</option>
+          <option value="DE">DE - Allemagne</option>
+          <option value="BE">BE - Belgique</option>
+          <option value="CH">CH - Suisse</option>
+          <option value="IT">IT - Italie</option>
+          <option value="ES">ES - Espagne</option>
+          <option value="GB">GB - Royaume-Uni</option>
+          <option value="US">US - États-Unis</option>
+          <option value="CA">CA - Canada</option>
+          <option value="CN">CN - Chine</option>
+          <option value="JP">JP - Japon</option>
+          <option value="RU">RU - Russie</option>
+        </select>
+        <b class="enregistrer-ajouter-repas">Enregistrer et ajouter</b>
+        <b class="annuler-repas">Annuler</b>
+        <b class="ajouter-justif-repas">Ajouter un justificatif</b>
+      </div>
+
+      <div id="tableau-peage" class="tableau-peage" style="display:none;">
+        <b class="montant-peage">Montant</b>
+        <div class="montant-devise-wrapper-peage">
+          <input type="text" id="montant-input-peage" class="montant-input-peage" name="montant">
+          <select name="devise" id="devise-select-peage" class="devise-select-peage">
+            <option value="">--Sélectionner--</option>
+            <option value="eur">EUR(€)</option>
+            <option value="usd">USD ($)</option>
+            <option value="gbp">GBP (£)</option>
+            <option value="jpy">JPY (¥)</option>
+            <option value="chf">CHF (CHF)</option>
+            <option value="cad">CAD (C$)</option>
+          </select>
+        </div>
+        <input type="text" id="remarque-input-peage" class="remarque-input-peage" name="remarque">
+        <b class="remarque-peage">Remarque</b>
+        <b class="pays-peage">Pays</b>
+        <select name="pays" id="pays-input-peage" class="pays-input-peage">
+          <option value="">--Sélectionner--</option>
+          <option value="FR">FR - France</option>
+          <option value="DE">DE - Allemagne</option>
+          <option value="BE">BE - Belgique</option>
+          <option value="CH">CH - Suisse</option>
+          <option value="IT">IT - Italie</option>
+          <option value="ES">ES - Espagne</option>
+          <option value="GB">GB - Royaume-Uni</option>
+          <option value="US">US - États-Unis</option>
+          <option value="CA">CA - Canada</option>
+          <option value="CN">CN - Chine</option>
+          <option value="JP">JP - Japon</option>
+          <option value="RU">RU - Russie</option>
+        </select>
+        <b class="enregistrer-ajouter-peage">Enregistrer et ajouter</b>
+        <b class="annuler-peage">Annuler</b>
+        <b class="ajouter-justif-peage">Ajouter un justificatif</b>
+      </div>
+    </div>
+  </body>
+  <script src="../script.js"></script>
+</html>
+
